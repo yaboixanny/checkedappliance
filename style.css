@@ -2,9 +2,9 @@
 :root {
     --primary: #000000;
     /* Brand Black */
-    --accent: #8b6ab7;
-    /* Brand Purple */
-    --accent-hover: #d6a040;
+    --accent: #d11f27;
+    /* Brand Red */
+    --accent-hover: #8f1117;
     --bg-light: #ffffff;
     --white: #ffffff;
     --text-main: #000000;
@@ -112,7 +112,7 @@ html, body {
 }
 
 .logo-img {
-    height: 55px;
+    height: 64px;
     width: auto;
 }
 
@@ -121,18 +121,25 @@ html, body {
     display: flex;
     align-items: center;
     gap: 20px;
+    margin-left: auto;
 }
 
-.status-badge {
+.header-contact {
     display: flex;
-    align-items: center;
-    gap: 8px;
-    background: #ffffff;
-    padding: 6px 12px;
-    border-radius: 50px;
-    font-size: 0.85rem;
-    font-weight: 600;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+    font-size: 0.82rem;
+    line-height: 1.35;
     color: var(--primary);
+    text-align: right;
+    max-width: 340px;
+}
+
+.header-contact a {
+    color: var(--accent);
+    font-weight: 800;
+    text-decoration: none;
 }
 
 .pulse-dot {
@@ -175,6 +182,14 @@ html, body {
     font-size: 1.1rem;
 }
 
+.header-cta {
+    background: var(--accent);
+    color: var(--white);
+    padding: 12px 18px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px 0 rgba(209, 31, 39, 0.45);
+}
+
 /* Buttons */
 .btn {
     display: inline-flex;
@@ -193,13 +208,13 @@ html, body {
 .btn-primary {
     background-color: var(--accent);
     color: var(--white);
-    box-shadow: 0 4px 14px 0 #8b6ab7;
+    box-shadow: 0 4px 14px 0 rgba(209, 31, 39, 0.45);
 }
 
 .btn-primary:hover {
     background-color: var(--accent-hover);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px #8b6ab7;
+    box-shadow: 0 6px 20px rgba(209, 31, 39, 0.45);
 }
 
 .btn-secondary {
@@ -310,11 +325,12 @@ html, body {
 }
 
 .hero-form-card {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.78);
     border: 1px solid #000000;
     border-radius: 20px;
     padding: 26px;
     box-shadow: 0 18px 40px #000000;
+    backdrop-filter: blur(8px);
 }
 
 .hero-form-kicker {
@@ -522,7 +538,7 @@ html, body {
     right: 20px;
     width: 24px;
     height: 24px;
-    background: #8b6ab7;
+    background: var(--accent);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -654,7 +670,7 @@ html, body {
 
 .faq-item[open] {
     background: #fff;
-    border-color: #8b6ab7;
+    border-color: var(--accent);
     box-shadow: 0 10px 30px #000000;
 }
 
@@ -761,7 +777,7 @@ html, body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: #8b6ab7;
+    background: var(--accent);
     padding: 20px;
     color: var(--white);
     font-weight: 700;
@@ -1004,7 +1020,7 @@ footer {
     }
 }
 
-/* --- Why Pick Spud Pest Control V3 Styles --- */
+/* --- Why Pick Section V3 Styles --- */
 .why-pick-v3 {
     padding: 100px 0;
     background: #ffffff;
@@ -1047,7 +1063,7 @@ footer {
 .divider-v3 {
     width: 70px;
     height: 4px;
-    background: #8b6ab7;
+    background: var(--accent);
     border-radius: 2px;
     margin: 25px auto 0;
 }
@@ -1075,7 +1091,7 @@ footer {
 
 .feature-card-v3:hover {
     background: #ffffff;
-    border-color: #8b6ab7;
+    border-color: var(--accent);
     transform: translateY(-8px) scale(1.02);
     box-shadow: 0 20px 40px #000000;
 }
@@ -1083,13 +1099,13 @@ footer {
 .icon-box-v3 {
     width: 68px;
     height: 68px;
-    background: #8b6ab7;
+    background: var(--accent);
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
-    border: 1px solid #8b6ab7;
+    border: 1px solid var(--accent);
     transition: transform 0.4s ease;
 }
 
@@ -1099,7 +1115,7 @@ footer {
 
 .feature-card-v3:hover .icon-box-v3 {
     transform: rotate(10deg) scale(1.1);
-    background: #8b6ab7;
+    background: var(--accent);
 }
 
 .card-title-v3 {
@@ -1269,7 +1285,7 @@ footer {
     border-radius: 60px;
     font-weight: 800;
     text-decoration: none;
-    box-shadow: 0 15px 35px #8b6ab7;
+    box-shadow: 0 15px 35px rgba(209, 31, 39, 0.45);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border: 2px solid #ffffff;
     position: relative;
@@ -1280,7 +1296,7 @@ footer {
 .floating-cta-v2:hover {
     transform: translateY(-8px) scale(1.05);
     background: var(--accent-hover);
-    box-shadow: 0 20px 45px #8b6ab7;
+    box-shadow: 0 20px 45px rgba(209, 31, 39, 0.45);
     border-color: var(--white);
 }
 
@@ -1315,11 +1331,12 @@ footer {
 }
 
 .form-wrapper-v2 {
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.84);
     border-radius: 40px;
     overflow: hidden;
     box-shadow: 0 40px 100px -20px #000000;
     border: 1px solid #000000;
+    backdrop-filter: blur(10px);
 }
 
 .form-grid-v2 {
@@ -1328,7 +1345,7 @@ footer {
 }
 
 .form-content-v2 {
-    background: #8b6ab7;
+    background: var(--accent);
     padding: 70px;
     color: var(--white);
     display: flex;
@@ -1338,7 +1355,7 @@ footer {
 
 .form-tag {
     display: inline-block;
-    background: #8b6ab7;
+    background: var(--accent);
     color: var(--accent);
     padding: 6px 16px;
     border-radius: 50px;
@@ -1381,7 +1398,8 @@ footer {
 
 .form-container-v2 {
     padding: 70px;
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.86);
+    backdrop-filter: blur(10px);
 }
 
 .premium-form {
@@ -1444,7 +1462,7 @@ footer {
     outline: none;
     border-color: var(--accent);
     background: var(--white);
-    box-shadow: 0 10px 20px -5px #8b6ab7;
+    box-shadow: 0 10px 20px -5px rgba(209, 31, 39, 0.45);
 }
 
 .premium-form input:focus + .input-icon {
@@ -1457,7 +1475,7 @@ footer {
     padding: 20px;
     font-size: 1.2rem;
     margin-top: 10px;
-    box-shadow: 0 10px 25px #8b6ab7;
+    box-shadow: 0 10px 25px rgba(209, 31, 39, 0.45);
 }
 
 /* Success Modal & Animations */
@@ -1496,7 +1514,7 @@ footer {
     justify-content: center;
     font-size: 50px;
     margin: 0 auto 30px;
-    box-shadow: 0 15px 30px #8b6ab7;
+    box-shadow: 0 15px 30px rgba(209, 31, 39, 0.45);
     animation: successPop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
