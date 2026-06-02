@@ -1808,7 +1808,7 @@ footer {
 
 @media (max-width: 768px) {
     .mobile-truck-anim-hero {
-        display: block !important;
+        display: none !important;
     }
 }
 
