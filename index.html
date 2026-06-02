@@ -443,7 +443,7 @@
                 <div class="modal-body" style="text-align: center; padding: 20px 10px 40px;">
                     <div class="success-icon">✓</div>
                     <h3 style="font-size: 2rem; color: var(--primary); margin-bottom: 15px;">Request Received!</h3>
-                    <p style="font-size: 1.15rem; color: var(--text-light); line-height: 1.6; max-width: 430px; margin: 0 auto 30px;">Thanks for filling out the form. This template is set up to confirm the lead cleanly without any tracking add-ons.</p>
+                    <p style="font-size: 1.15rem; color: var(--text-light); line-height: 1.6; max-width: 430px; margin: 0 auto 30px;">Thanks for submitting your form. We'll reach out in the next couple minutes.</p>
                     <button class="btn btn-primary close-modal-btn" style="width: 100%; border-radius: 50px; padding: 15px;">Awesome, Got it</button>
                 </div>
             </div>
@@ -634,6 +634,18 @@
                         headers: { "Content-Type": "application/x-www-form-urlencoded" }
                     })
                     .then(() => {
+                        document.body.setAttribute("data-form-status", "form_submit");
+                        window.dispatchEvent(new CustomEvent("form_submit", {
+                            detail: { formName: form.getAttribute("name") || "netlify-form" }
+                        }));
+
+                        if (window.dataLayer && Array.isArray(window.dataLayer)) {
+                            window.dataLayer.push({
+                                event: "form_submit",
+                                form_name: form.getAttribute("name") || "netlify-form"
+                            });
+                        }
+
                         modal.style.display = "block";
                         document.body.style.overflow = "hidden";
                         form.reset();
